@@ -32,7 +32,7 @@ Test API:
         "name": "red",
         "hexCode": "#FF0000",
         "rgbCode": "(255,0,0)"
-      }```
+      }
   * PUT
     * localhost:3000/colors/1
     * body:
@@ -41,6 +41,6 @@ Test API:
         "name": "blue",
         "hexCode": "#00FF00",
         "rgbCode": "(0,255,0)"
-      }```
+      }
   * DELETE
     * localhost:3000/colors/1
