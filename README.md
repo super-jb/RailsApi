@@ -1,7 +1,7 @@
 # README
-Simple API built in Rails
-
-Things you may want to cover:
+## Simple API built in Rails
+## Gets, adds, updates and deletes Colors
+## Swagger documentation included: localhost://3000/api-docs
 
 * Ruby version
   http://railsinstaller.org
@@ -13,12 +13,11 @@ Things you may want to cover:
 
 * Run API
   * from command line, cd into folder
-  * run rails s OR rails server
+  * rails s OR rails server
   * from your browser, go to localhost://3000/colors
   * open Postman and test the API routing endpoints:
-    * GET all
+    * GET
       * localhost:3000/colors
-    * GET single
       * localhost:3000/colors/1
     * POST
       * localhost:3000/colors

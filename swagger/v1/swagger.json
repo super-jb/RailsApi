@@ -1,0 +1,107 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "API V1",
+    "version": "v1"
+  },
+  "paths": {
+    "/colors": {
+      "post": {
+        "summary": "Creates a color",
+        "tags": [
+          "Colors"
+        ],
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "color",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "hexCode": {
+                  "type": "string"
+                },
+                "rgbCode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "hexCode",
+                "rgbCode"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "color created"
+          },
+          "422": {
+            "description": "invalid request"
+          }
+        }
+      }
+    },
+    "/colors/{id}": {
+      "get": {
+        "summary": "Retrieves a color",
+        "tags": [
+          "Colors"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "fin": "path",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "color found",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "hexCode": {
+                  "type": "string"
+                },
+                "rgbCode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name",
+                "hexCode",
+                "rgbCode"
+              ]
+            }
+          },
+          "404": {
+            "description": "color not found"
+          },
+          "406": {
+            "description": "unsupported accept header"
+          }
+        }
+      }
+    }
+  }
+}
